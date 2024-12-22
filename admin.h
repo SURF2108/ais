@@ -22,13 +22,13 @@ int autheticateAdmin()
 	const  char adminuser[]= "admin";
 	const char adminpass[]= "vertex"; 
 
-	printf("Enter the username for admin:");
-	gets(adminusername);
+	printf("Enter the username for admin: ");
+	fgets(adminusername, 50 , stdin);
 
-	printf("Enter the password for admin:");
-	gets(adminpasswd);
+	printf("Enter the password for admin: ");
+	fgets(adminpasswd , 50 , stdin);
 
-	if(strcmp(adminusername,adminuser)==0 && strcmp(adminpasswd,adminpass))
+	if((strcmp(adminusername,adminuser) && strcmp(adminpasswd,adminpass)))
 	{
 		printf("You are an admin");
 	}
@@ -40,10 +40,10 @@ void signup_input_user()
 {
 	User u;
 	char username[50], password[50];
-	printf("Enter username:");
-	scanf("%c ", u.username);
+	printf("\nEnter username:");
+	fgets(username, 50 , stdin);
 	printf("Enter password:");
-	scanf("%c ", u.password);
+	fgets(password, 50 , stdin);
 }
 
 void exportToCSV()
